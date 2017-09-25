@@ -25,6 +25,11 @@ public class AddressBook {
 		// TODO Auto-generated method stub
 		
 		System.out.println("Address Book");
+		BuddyInfo test = new BuddyInfo(); 
+		test.setName("Diddy");
+		AddressBook contactlist = new AddressBook(); 
+		contactlist.addBuddy(test);
+		contactlist.removeBuddy(test.getName());
 
 	}
 	
