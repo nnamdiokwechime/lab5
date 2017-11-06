@@ -10,7 +10,7 @@ public class BuddyInfo {
 
 	private static String name; 
 	private static String address; 
-	private static long phoneNumber; 
+	private static String phoneNumber; 
 	
 	/**
 	 * @param args
@@ -18,14 +18,21 @@ public class BuddyInfo {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//System.out.println("Hello World!");
-		BuddyInfo bro = new BuddyInfo();
-		bro.setName("Reaper");
+		BuddyInfo bro = new BuddyInfo("Reaper", "Somewhere in America", "3435409483");
+		/*bro.setName("Reaper");
 		bro.setAddress("Somewhere in America");
-		bro.setPhoneNumber(34354094);
+		bro.setPhoneNumber("34354094");*/
 		
 		System.out.println("Hello " + bro.getName());
 
 	}
+	
+	public BuddyInfo(String name, String address, String phoneNumber) {
+		this.name = name;
+		this.address = address; 
+		this.phoneNumber = phoneNumber;
+	}
+	
 	
 	/**
 	 * @return the name
@@ -58,14 +65,18 @@ public class BuddyInfo {
 	/**
 	 * @return the phoneNumber
 	 */
-	public static long getPhoneNumber() {
+	public static String getPhoneNumber() {
 		return phoneNumber;
 	}
 
 	/**
 	 * @param phoneNumber the phoneNumber to set
 	 */
-	public static void setPhoneNumber(long phoneNumber) {
+	public static void setPhoneNumber(String phoneNumber) {
 		BuddyInfo.phoneNumber = phoneNumber;
+	}
+	
+	public String toString() {
+		return name + "  " + phoneNumber + " \n" + address+  "\n";
 	}
 }
